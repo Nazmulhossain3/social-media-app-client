@@ -10,6 +10,7 @@ import Main from './LayOut/Main/Main.jsx';
 import Home from './Pages/Home/Home.jsx';
 import About from './Pages/About/About.jsx';
 import Media from './Pages/Media/Media.jsx';
+import SinglePost from './Pages/Home/SinglePost.jsx';
 
 
 const router = createBrowserRouter([
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path : '/about',
         element : <About></About>
+      },
+      {
+        path : '/signlePost/:id',
+        element : <SinglePost></SinglePost>
       }
     ]
   },

@@ -2,7 +2,7 @@ import { Navbar, } from "keep-react";
 import { NavLink } from "react-router-dom";
 const TopNav = () => {
     return (
-        <div>
+        <div className="px-10 py-6">
             <Navbar fluid={true}>
       <Navbar.Container className="flex items-center justify-between">
         <Navbar.Container className="flex items-center">

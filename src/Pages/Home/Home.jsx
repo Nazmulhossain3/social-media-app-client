@@ -1,8 +1,9 @@
+import AddPost from "./AddPost";
 
 const Home = () => {
     return (
         <div>
-            this is home
+      <AddPost></AddPost>
         </div>
     );
 };

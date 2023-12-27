@@ -20,7 +20,7 @@ const Media = () => {
             posts.map((post,index)=> <div key={index}>
                 <p className="text-xl mb-4">{post.title}</p>
                 <img className="lg:h-64" src={post.imageUrl} alt="" />
-                {/* <img className="w-16 h-12" src="https://i.ibb.co/bbbzD8s/love-react-icon-3d-render-vector-removebg-preview.png" alt="" /> */}
+                <img className="w-12 h-8" src="https://i.ibb.co/bbbzD8s/love-react-icon-3d-render-vector-removebg-preview.png" alt="" />
 
                 <Link to={`/signlePost/${post._id}`} ><button className="border py-2 px-8 mt-2 bg-green-500 text-white hover:bg-yellow-600">Details</button></Link>
 

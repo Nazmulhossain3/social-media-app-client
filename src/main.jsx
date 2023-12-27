@@ -11,6 +11,9 @@ import Home from './Pages/Home/Home.jsx';
 import About from './Pages/About/About.jsx';
 import Media from './Pages/Media/Media.jsx';
 import SinglePost from './Pages/Home/SinglePost.jsx';
+import AuthProvider from './Component/Provider/AuthProvider.jsx';
+import Login from './Pages/Login/Login.jsx';
+import Register from './Pages/Register/Register.jsx';
 
 
 const router = createBrowserRouter([
@@ -34,6 +37,14 @@ const router = createBrowserRouter([
       {
         path : '/signlePost/:id',
         element : <SinglePost></SinglePost>
+      },
+      {
+        path : '/login',
+        element : <Login></Login>
+      },
+      {
+        path : '/register',
+        element : <Register></Register>
       }
     ]
   },
@@ -41,6 +52,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+   <AuthProvider>
    <RouterProvider router={router} />
+   </AuthProvider>
   </React.StrictMode>,
 )

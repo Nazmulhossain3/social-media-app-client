@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const About = () => {
     const [abouts,setAbouts] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:3000/about-route/getAllAbout')
+        fetch('https://social-media-app-server-vert.vercel.app/about-route/getAllAbout')
         .then(res => res.json())
         .then(data => {
             setAbouts(data.result)

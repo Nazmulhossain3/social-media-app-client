@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import {  useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
@@ -51,10 +51,11 @@ const AddPost = () => {
       console.log('Image URL:', imageUrl);
       const post = {
         title,
-        imageUrl
+        imageUrl,
+        reactionsCount: 0 ,
       }
 
-      fetch('http://localhost:3000/post-route/createPost',{
+      fetch('https://social-media-app-server-vert.vercel.app/post-route/createPost',{
         method : 'POST',
         headers : {
             'Content-type' : "application/json"

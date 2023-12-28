@@ -15,6 +15,7 @@ import AuthProvider from './Component/Provider/AuthProvider.jsx';
 import Login from './Pages/Login/Login.jsx';
 import Register from './Pages/Register/Register.jsx';
 import UpdateAbout from './Pages/About/UpdateAbout.jsx';
+import PrivateRoute from './Pages/PrivateRoute/PrivateRoute.jsx';
 
 
 const router = createBrowserRouter([
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
       },
       {
         path : '/signlePost/:id',
-        element : <SinglePost></SinglePost>
+        element : <PrivateRoute><SinglePost></SinglePost></PrivateRoute>
       },
       {
         path : '/login',
@@ -49,7 +50,7 @@ const router = createBrowserRouter([
       },
       {
         path : '/updateAbout/:id',
-        element : <UpdateAbout></UpdateAbout>
+        element : <PrivateRoute><UpdateAbout></UpdateAbout></PrivateRoute>
       }
     ]
   },

@@ -13,9 +13,9 @@ const TopNav = () => {
 
 
     return (
-        <div className="px-10 py-6">
-            <Navbar fluid={true}>
-      <Navbar.Container className="flex items-center justify-between">
+        <div className=" ">
+            <Navbar className="bg-green-500  text-xl text-white" fluid={true}>
+      <Navbar.Container className="flex items-center justify-between px-10 py-6">
         <Navbar.Container className="flex items-center">
           
           <Navbar.Divider></Navbar.Divider>
@@ -42,17 +42,17 @@ const TopNav = () => {
         <Navbar.Container className="flex gap-2">
         {user ? (
               <div className=" flex gap-5">
-                 <button onClick={handleLogout}>Logout</button>
+                 <button className="btn btn-md btn-outline text-white" onClick={handleLogout}>Logout</button>
                 <img
                   title={user.displayName}
-                  className="rounded-full w-10"
+                  className="rounded-full w-10 h-10"
                   src={user?.photoURL}
                 />
                 
               </div>
             ) : (
               <Link to="/login">
-                <button className="btn btn-sm">Login</button>
+                <button className="btn btn-md btn-outline text-white">Login</button>
               </Link>
             )}
          

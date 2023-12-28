@@ -6,7 +6,7 @@ const SinglePost = () => {
     const [posts,setPosts] = useState([])
 
     useEffect(()=> {
-        fetch(`http://localhost:3000/post-route/singlePost/${id}`)
+        fetch(`https://social-media-app-server-vert.vercel.app/post-route/singlePost/${id}`)
         .then(res => res.json())
         .then(data => {
             setPosts(data.result)

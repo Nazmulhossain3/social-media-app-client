@@ -24,7 +24,7 @@ const UpdateAbout = () => {
         console.log(about)
 
        // Corrected fetch URL
-fetch(`http://localhost:3000/about-route/updateAbout/${id}`, {
+fetch(`https://social-media-app-server-vert.vercel.app/about-route/updateAbout/${id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',

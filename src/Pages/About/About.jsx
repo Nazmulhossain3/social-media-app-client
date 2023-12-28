@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const About = () => {
     const [abouts,setAbouts] = useState([])
@@ -14,7 +15,7 @@ const About = () => {
            {
             abouts.map((about,index)=> <div className="border p-4" key={index}>
              
-                <button className="flex mx-auto relative left-24 bg-green-500 text-white border px-5">Edit</button>
+               <Link to={`/updateAbout/${about._id}`} > <button className="flex mx-auto relative left-24 bg-green-500 text-white border px-5">Edit</button></Link>
                 <p>Name : {about.name} </p>
                 <p>University : {about.university} </p>
                 <p>Email : {about.email} </p>
